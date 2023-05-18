@@ -19,7 +19,7 @@ const Home = () => {
 
     <div className='row grid grid-cols-4 gap-4'>
         {shop.map(item => (
-            <div className='item p-6 rounded-md shadow-md cursor-pointer mx-auto'>
+            <div className='item p-6 rounded-md shadow-md cursor-pointer mx-auto' key={item.id}>
                 <img className='mb-4 w-full object-cover' width={300} src={item.full_background} alt="" />
                 <h2 className='text-slate-700 font-bold text-xl'>{item.name}</h2>
                 <p className='w-full text-slate-700 mb-4 truncate'>{item.description}</p>

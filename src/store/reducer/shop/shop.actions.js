@@ -7,7 +7,7 @@ export const shopRender = createAsyncThunk(
         try {
             return await ShopSerivec.fetchShop()
         } catch (error) {
-            return thumbApi.re("Heloo")
+            return error
         }
     }
 )

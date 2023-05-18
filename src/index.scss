@@ -14,7 +14,8 @@
         transition: 0.5s ease;
         &:hover {
             outline: .1rem solid #130f40;
-            outline-offset: -.5rem
+            outline-offset: -.5rem;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2)
         };
         @apply p-4 rounded-md shadow-md flex flex-col justify-center items-center gap-4;
         
@@ -26,10 +27,6 @@
                 margin: 0.5rem 0
             }
         
-
-        h1 {
-            @apply text-2xl font-semibold text-slate-700 
-        };
 
         &__body {
             padding: 3rem;
@@ -56,5 +53,28 @@
                 }
             }
         }
+    }
+}
+
+.shop-btn {
+    position: relative;
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    p {
+        content: "";
+        position: absolute;
+        top: -10%;
+        right: -20%;
+        padding: 8px;
+        font-size: 10px;
+        font-weight: 700;
+        width: 1rem;
+        height: 1rem;
+        background-color: #fff;
+        color: #130f40;
+        border-radius: 50%;
     }
 }

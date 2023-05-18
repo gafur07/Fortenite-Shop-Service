@@ -1,7 +1,10 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+  const { basket } = useSelector(store => store.basket)
+
   return (
     
     <>
@@ -14,9 +17,12 @@ const Navbar = () => {
                   <Link to={"/shop"}>
                     <h1 className='text-2xl cursor-pointer'>Shop</h1>
                   </Link> 
-                    <button className='text-2xl'>
+                  <Link to={"/price"}>
+                    <button className='shop-btn text-2xl'>
                         <i class='bx bx-basket'></i>
+                        <p>{basket.length}</p>
                     </button>
+                  </Link>
                 </div>
             </nav>
         </header>
